@@ -17,6 +17,9 @@ function Icon({children, title, description, ...rest}) {
           viewBox="0 0 841.9 595.3"
 		  role="img"
 		  aria-labelledby={`${titleId} ${descriptionId}`}
+      // aria-labelledby={[title && titleId, description && descId]
+      //   .filter(Boolean)
+      //   .join(" ")}
 		  focusable="false"
 		  {...rest}
         >
