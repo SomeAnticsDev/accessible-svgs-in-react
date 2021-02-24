@@ -17,9 +17,16 @@ function Icon({children, title, description, ...rest}) {
           viewBox="0 0 841.9 595.3"
 		  role="img"
 		  aria-labelledby={`${titleId} ${descriptionId}`}
-      // aria-labelledby={[title && titleId, description && descId]
-      //   .filter(Boolean)
-      //   .join(" ")}
+
+		  // CHAN'S APPROACH TO OPTIONALLY PASSING ONE OR THE OTHER:  
+		  // aria-labelledby={[title && titleId, description && descId]
+		  //   .filter(Boolean)
+		  //   .join(" ")}
+
+		  // USING MODERN ARIA-DESCRIBEDBY APPROACHES
+		  // aria-labelledby={title ? titleId : undefined}
+		  // aria-describedby={description ? descriptionId : undefined}
+		  
 		  focusable="false"
 		  {...rest}
         >
